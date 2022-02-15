@@ -1,0 +1,27 @@
+<?php
+
+namespace App\Cards;
+
+use Infinity\Cards\Card;
+use Infinity\Resources\Resource;
+
+class DummyClass extends Card
+{
+    public static string $title = 'DummyClass';
+    public static array $groups = ['admin'];
+
+    public function __construct(Resource $resource)
+    {
+        $this->setTitleButton('View All', infinity_route("{$resource->getIdentifier()}.index"));
+
+        // $this->addCardData('key', queryResult);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function view(): string
+    {
+        return '';
+    }
+}

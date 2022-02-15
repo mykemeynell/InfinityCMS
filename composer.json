@@ -1,0 +1,16 @@
+{
+    "name": "mykemeynell/infinity",
+    "description": "Infinity CMS package",
+    "keywords": ["infinity", "cms", "laravel", "laravel-cms"],
+    "type": "package",
+    "require": {
+        "mykemeynell/laraveluuid": "^1.0",
+        "doctrine/dbal": "^3.3",
+        "laravel/ui": "^3.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Infinity\\": "src"
+        }
+    }
+}

@@ -1,0 +1,21 @@
+<?php
+
+namespace App\Infinity;
+
+use Infinity\Resources\Fields\ID;
+use Infinity\Resources\Resource;
+
+class DummyClass extends Resource
+{
+    public static string $model = 'App\Models\DummyModel';
+
+    /**
+     * @inheritDoc
+     */
+    public function fields(): array
+    {
+        return [
+            ID::make(),
+        ];
+    }
+}
