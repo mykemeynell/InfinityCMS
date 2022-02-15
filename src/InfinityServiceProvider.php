@@ -200,6 +200,7 @@ class InfinityServiceProvider extends ServiceProvider
             'password',
             'wysiwyg',
             'fluid',
+            'image',
 //            'number',
 //            'hidden'
         ];
