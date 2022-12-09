@@ -8,7 +8,7 @@ if(!function_exists('infinity_date_format')) {
      *
      * @return mixed
      */
-    function infinity_date_format(bool $long = false): string
+    function infinity_date_format(bool $long = false): ?string
     {
         return settings(sprintf('date.format.%s', $long ? 'long' : 'short'));
     }
@@ -23,7 +23,7 @@ if(!function_exists('infinity_time_format'))
      *
      * @return string
      */
-    function infinity_time_format(bool $long = false): string
+    function infinity_time_format(bool $long = false): ?string
     {
         return settings(sprintf('time.format.%s', $long ? 'long' : 'short'));
     }
@@ -38,7 +38,7 @@ if(!function_exists('infinity_datetime_format'))
      *
      * @return string
      */
-    function infinity_datetime_format(bool $long = false): string
+    function infinity_datetime_format(bool $long = false): ?string
     {
         return sprintf('%s %s',
             infinity_date_format($long),
