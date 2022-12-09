@@ -19,7 +19,7 @@ class InfinityController extends InfinityBaseController
     public function assets(Request $request): \Illuminate\Http\Response|\Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\Routing\ResponseFactory
     {
         try {
-            $path = dirname(__DIR__, 3).'/publishable/assets/'.Util::normalizeRelativePath(urldecode($request->get('path')));
+            $path = dirname(__DIR__, 3).'/publishable/assets/'.urldecode($request->get('path'));
         } catch (\LogicException $e) {
             abort(404);
         }
