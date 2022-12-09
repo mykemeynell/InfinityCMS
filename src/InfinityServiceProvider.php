@@ -138,13 +138,6 @@ class InfinityServiceProvider extends ServiceProvider
      */
     private static function checkFontAwesome(): void
     {
-        if(
-            trim(Str::lower(infinity_config('fontawesome.licence', 'free'))) == 'pro' &&
-            !Str::contains(infinity_config('fontawesome.src'), 'pro')
-        ) {
-            throw new \Exception(sprintf("It looks like you're trying to use FontAwesome %s - check your FontAwesome source config [%s].", Str::upper(infinity_config('fontawesome.licence', 'free')), infinity_config('fontawesome.src')));
-        }
-
         if(!Str::endsWith(infinity_config('fontawesome.src'), '.js'))
         {
             throw new \Exception("Please use the SVG version of FontAwesome - the CDN URL should end with .js");
